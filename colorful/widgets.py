@@ -49,7 +49,7 @@ class ColorFieldWidget(TextInput):
         if self.colors:
             attrs['list'] = 'datalist_for_%s' % attrs['id']
             parts.append(self.render_datalist(attrs['list']))
-        attrs['class'] = 'jscolor'
+        attrs['class'] = 'jscolor form-control'
         parts.append(super(ColorFieldWidget, self).render(name, value, attrs))
         #parts.append(self.render_script(attrs['id']))
         return mark_safe(''.join(parts))
